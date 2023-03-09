@@ -1,0 +1,46 @@
+{
+	"name": "gitgrafic",
+	"version": "1.0.0",
+	"description": "Gestion de comits con un CLI Gráfico",
+	"main": "dist/index.js",
+	"bin": {
+		"gitgrafic": "./src/bin.js"
+	},
+	"scripts": {
+		"exec": "node dist/index.mjs",
+		"start": "tsup src/index.ts --format esm --target node16 && npm run exec",
+		"lint": "eslint . --ext .ts",
+		"lint-fix": "eslint . . --ext .ts --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jscode-es/git.git"
+	},
+	"keywords": [],
+	"author": "Sergio González <sgonzalez@jscode.es> (JSCODE)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jscode-es/git/issues"
+	},
+	"homepage": "https://github.com/jscode-es/git#readme",
+	"files": [
+		"dist/**/*"
+	],
+	"directories": {
+		"doc": "doc"
+	},
+	"devDependencies": {
+		"@types/node": "^18.14.6",
+		"@typescript-eslint/eslint-plugin": "^5.54.1",
+		"@typescript-eslint/parser": "^5.54.1",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.35.0",
+		"rimraf": "^4.4.0",
+		"ts-node": "^10.9.1",
+		"tsup": "^6.6.3",
+		"typescript": "^4.9.5"
+	},
+	"dependencies": {
+		"@clack/prompts": "^0.6.3"
+	}
+}
